@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:palestre/screens/welcomePage/welcome_page_screen.dart';
 import 'package:palestre/screens/widget/blackButton.dart';
 import 'package:palestre/screens/widget/blueButton.dart';
 
@@ -114,7 +115,12 @@ class RecuperaPw extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
-                  onTap: () => null,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WelecomePage()),
+                    );
+                  },
                   child: BlackButton(
                     testo: 'Indietro',
                   ),

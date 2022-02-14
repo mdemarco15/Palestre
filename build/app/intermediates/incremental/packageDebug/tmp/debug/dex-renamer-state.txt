@@ -1,4 +1,4 @@
-#Mon Feb 14 13:37:03 CET 2022
+#Mon Feb 14 19:29:47 CET 2022
 base.0=V\:\\GitHub\\Palestre\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

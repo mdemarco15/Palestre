@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:palestre/screens/recuperaPwPage/recupera_password_screen.dart';
+import 'package:palestre/screens/singup_page/singinPage.dart';
 import 'package:palestre/screens/widget/blackButton.dart';
 import 'package:palestre/screens/widget/blueButton.dart';
 
@@ -19,9 +20,10 @@ class WelecomePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/sfo.png"),
-                      fit: BoxFit.cover)),
+                image: DecorationImage(
+                    image: AssetImage("assets/images/sfo.png"),
+                    fit: BoxFit.cover),
+              ),
               child: Column(
                 //  mainAxisAlignment: MainAxisAlignment.center ,
                 children: [
@@ -116,15 +118,16 @@ class WelecomePage extends StatelessWidget {
                         obscureText: true,
                         autofocus: false,
                         decoration: const InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
-                            ),
-                            hintText: "Inserisci Password",
-                            hintStyle:
-                                TextStyle(color: Colors.grey, fontSize: 15)),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                          hintText: "Inserisci Password",
+                          hintStyle:
+                              TextStyle(color: Colors.grey, fontSize: 15),
+                        ),
                         cursorColor: Colors.white,
                         style: const TextStyle(
                           color: Colors.white,
@@ -141,9 +144,11 @@ class WelecomePage extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const RecuperaPw())),
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const RecuperaPw(),
+                            ),
+                          ),
                           child: Text(
                             "Password dimenticata?",
                             style: TextStyle(
@@ -172,11 +177,17 @@ class WelecomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       GestureDetector(
-                        onTap: () => null,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SingInPage()),
+                          );
+                        },
                         child: BlackButton(
                           testo: 'Iscriviti',
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ],
