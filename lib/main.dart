@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:palestre/screens/welcomePage/welcome_page_screen.dart';
 
+// prova
 void main() {
   runApp(const MyApp());
 }
@@ -29,4 +30,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
